@@ -1,0 +1,38 @@
+{
+  "name": "verdaccio-aliyun",
+  "version": "0.0.6",
+  "description": "verdaccio-aliyun",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "files": [
+    "lib/"
+  ],
+  "engines": {
+    "node": ">=10"
+  },
+  "dependencies": {
+    "@verdaccio/commons-api": "^8.5.0",
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "@verdaccio/babel-preset": "^8.5.0",
+    "@verdaccio/eslint-config": "^8.5.0",
+    "eslint": "^6.6.0",
+    "jest": "^24.9.0",
+    "prettier": "^1.19.1",
+    "standard-version": "^7.0.0"
+  },
+  "keywords": [
+    "verdaccio"
+  ],
+  "license": "MIT",
+  "repository": "anchenlee/aliyun",
+  "author": "",
+  "scripts": {
+    "build": "npm run build:types && npm run build:js",
+    "build:js": "babel src/ --out-dir lib --extensions \".js,.jsx\" --source-maps inline",
+    "build:types": "tsc --emitDeclarationOnly",
+    "test": "jest",
+    "lint": "eslint \"**/*.{js,ts}\""
+  }
+}
